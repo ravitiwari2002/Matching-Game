@@ -1,4 +1,3 @@
-//variables for timer
 let minute = 0;
 let second = 0;
 let millisecond = 0;
