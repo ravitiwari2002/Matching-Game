@@ -5,7 +5,7 @@ let loseAudio = new Audio('audio/lose.mp3');
 let bgm = new Audio('audio/bgm.wav');
 
 function flipCardWhenClicked(cardObject) {
-  // Adds an "onclick" attribute/listener to the element that will call the function below.
+ //"onclick" attribute/listener to the element that will call the function below.
   cardObject.element.onclick = function () {
     if (cardObject.element.classList.contains("flipped")) {
       return;
