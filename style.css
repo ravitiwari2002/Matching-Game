@@ -1,0 +1,319 @@
+:root {
+    --card-width: clamp(80px, 20vw, 125px);
+    --card-height: clamp(140px, 30vw, 175px);
+}
+
+body {
+    margin: 0;
+    background: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-shadow: 2px 2px 3px rgb(177, 177, 177);
+    min-height: 100vh;
+    width: auto;
+}
+
+h1 {
+    font-size: 130px;
+    color: white;
+    font-family: 'Nosifer', cursive;
+    margin: 0;
+    text-align: center;
+    text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px,
+        #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px,
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px white,
+        0 0 82px white,
+        0 0 92px orange,
+        0 0 102px orange,
+        0 0 151px orange;
+    animation: glitch 0.7s linear infinite;
+
+}
+
+
+@keyframes glitch {
+
+    2%,
+    64% {
+        transform: translate(2px, 0) skew(0deg);
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 0) skew(0deg);
+    }
+
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+
+h1:before,
+h1:after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+
+h1:before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+
+    2%,
+    64% {
+        transform: translate(2px, -2px);
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 2px);
+    }
+
+    62% {
+        transform: translate(13px, -1px) skew(-13deg);
+    }
+}
+
+h1:after {
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+
+    2%,
+    64% {
+        transform: translate(-2px, 0);
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 0);
+    }
+
+    62% {
+        transform: translate(-22px, 5px) skew(21deg);
+    }
+}
+
+h3 {
+    color: gold;
+    font-family: 'Creepster', cursive;
+    text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px,
+        #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px;
+
+}
+
+#ui-container {
+    text-align: center;
+}
+
+#ui-container h3 {
+    margin: 10px;
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+}
+
+#ui-container h3:first-child {
+    margin-right: 40px;
+}
+
+#ui-container h3:first-child {
+    margin-right: 40px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#win {
+    width: 100%;
+    height: 100%;
+    font-family: 'Creepster', cursive;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: green;
+    position: fixed;
+    transition-duration: 0.5s;
+    font-size: clamp(20px, 5vw, 100px);
+    font-weight: 400;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px white,
+        0 0 82px white,
+        0 0 92px green,
+        0 0 102px green,
+        0 0 151px green;
+    z-index: 100;
+    animation: fadeIn linear 4s;
+}
+
+#lose {
+    width: 100%;
+    height: 100%;
+    font-family: 'Creepster', cursive;
+    color: blue;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    transition-duration: 0.5s;
+    font-size: clamp(20px, 5vw, 100px);
+    font-weight: 400;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px white,
+        0 0 82px white,
+        0 0 92px blue,
+        0 0 102px blue,
+        0 0 151px blue;
+    z-index: 100;
+    animation: fadeIn linear 4s;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    margin-top: 100px;
+    font-family: 'Creepster', cursive;
+    font-size: clamp(16px, 4vw, 22px);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: red;
+    border: white solid 2px;
+    border-radius: 5px;
+}
+
+button.reset {
+    padding: 5px 5px 5px 5px;
+}
+
+.reset {
+    margin-top: 20px;
+}
+
+.reset img {
+    width: 30px;
+    height: 30px;
+}
+
+#lose img {
+    height: 30px;
+    width: 30px;
+}
+
+#win img {
+    width: 30px;
+    height: 30px;
+}
+
+#card-container {
+    font-size: 0;
+    margin: 50px auto;
+    width: calc((var(--card-width) + 24px) * 4);
+}
+
+.card {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    width: var(--card-width);
+    height: var(--card-height);
+    border: 2px solid white;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.glow {
+    box-shadow: 0 0 10px 4px white;
+}
+
+/* Style the two logo images themselves. */
+.card-down,
+.card-up {
+    /* Take images out of the flow. */
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    /* When facing away from the screen each image should be hidden. */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 5px;
+    transition-duration: .3s;
+    -webkit-transition-duration: .3s;
+}
+
+.card-down {
+    background-image: url(img/card.png);
+    background-color: red;
+    background-position: center;
+    background-size: cover;
+}
+
+.card-up {
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.flipped .card-down {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.flipped .card-up {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+}
+
+.image-1 .card-up {
+    background-image: url(img/image-1.png), linear-gradient(purple, purple);
+}
+
+.image-2 .card-up {
+    background-image: url(img/image-2.png), linear-gradient(purple, purple);
+}
+
+.image-3 .card-up {
+    background-image: url(img/image-3.png), linear-gradient(purple, purple);
+}
+
+.image-4 .card-up {
+    background-image: url(img/image-4.png), linear-gradient(purple, purple);
+}
+
+.image-5 .card-up {
+    background-image: url(img/image-5.png), linear-gradient(purple, purple);
+}
+
+.image-6 .card-up {
+    background-image: url(img/image-6.png), linear-gradient(purple, purple);
+}
