@@ -9,6 +9,8 @@ Pair Pursuit is a fun and challenging matching game where the objective is to ma
 - **Replayability:** Once you finish the game, you can play it again for endless fun.
 - **Performance Metrics:** The game tracks the number of flips and the time taken, allowing you to challenge yourself and improve your performance over time.
 
+https://github.com/ravitiwari2002/Pair-Pursuit/assets/81186121/c02c26bd-89a0-42bf-b313-c0eb00bf0eca
+
 ## License
 
     Copyright [2023] [Ravi Tiwari]
